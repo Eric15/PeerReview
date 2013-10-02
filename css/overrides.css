@@ -1,0 +1,15 @@
+.poster{
+background: url(../img/StarPattern.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.gray{
+background: #eee;
+}
+.danger{
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
