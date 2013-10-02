@@ -1,9 +1,9 @@
  <?php
 if(isset($_POST['submit'])){
-    $dbHost = "localhost";        //Location Of Database usually its localhost
-    $dbUser = "xxxx";            //Database User Name
-    $dbPass = "xxxxxx";            //Database Password
-    $dbDatabase = "db_name";    //Database Name
+    $dbHost = "PeerAppraiser.db.10804303.hostedresource.com";        //Location Of Database usually its localhost
+    $dbUser = "PeerAppraiser";            //Database User Name
+    $dbPass = "P33r@pprais3r";            //Database Password
+    $dbDatabase = "PeerAppraiser";    //Database Name
     
     $db = mysql_connect($dbHost,$dbUser,$dbPass)or die("Error connecting to database.");
     //Connect to the databasse
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
     The Above code can be in a different file, then you can place include'filename.php'; instead.
     */
     
-    //Lets search the databse for the user name and password
+    //Lets search the database for the user name and password
     //Choose some sort of password encryption, I choose sha256
     //Password function (Not In all versions of MySQL).
     $usr = mysql_real_escape_string($_POST['username']);
@@ -27,13 +27,11 @@ if(isset($_POST['submit'])){
         $row = mysql_fetch_array($sql);
         session_start();
         $_SESSION['username'] = $row['username'];
-        $_SESSION['fname'] = $row['first_name'];
-        $_SESSION['lname'] = $row['last_name'];
         $_SESSION['logged'] = TRUE;
-        header("Location: users_page.php"); // Modify to go to the page you would like
+        header("Location: new.php"); // Modify to go to the page you would like
         exit;
     }else{
-        header("Location: login_page.php");
+        header("Location: index.php");
         exit;
     }
 }else{    //If the form button wasn't submitted go to the index page, or login page
