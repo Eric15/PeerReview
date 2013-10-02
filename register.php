@@ -19,29 +19,26 @@
       	<h1>Peer Appraiser</h1>
 	</div>
 	<div class="form-group" style="margin-left:auto;margin-right:auto;width:280px">
-		<h2>Please Log In</h2>
+		<h2>Start giving feedback to your team!</h2>
 		<form action="verify.php" method="post">
 		<div class="form-group">
-			<label for="username">User Name</label><br>
+			<label for="username">Pick your User Name</label><br>
 			<input class="form-control" type="text" id="username" name="username">
 		</div>
 		<div class="form-group">
-			<label for="password">Password</label>
+			<label for="password">Pick a Memorable Password</label>
+			<input class="form-control" type="password" id="password" name="password">
+		</div>
+		<div class="form-group">
+			<label for="password">Type it in again to verify</label>
 			<input class="form-control" type="password" id="password" name="password">
 		</div>
 			<input class="btn btn-primary" type="submit" name="submit" value="Login">
 		</form>
 	</div>
-	<a href="register.php" class="btn btn-success btn-lg">New user?</a>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
-
-
-
-
-
-

@@ -1,4 +1,4 @@
- <?php
+<?php
 if(isset($_POST['submit'])){
     $dbHost = "PeerAppraiser.db.10804303.hostedresource.com";        //Location Of Database usually its localhost
     $dbUser = "PeerAppraiser";            //Database User Name
@@ -6,19 +6,15 @@ if(isset($_POST['submit'])){
     $dbDatabase = "PeerAppraiser";    //Database Name
     
     $db = mysql_connect($dbHost,$dbUser,$dbPass)or die("Error connecting to database.");
-    //Connect to the databasse
+    //Connect to the database
     mysql_select_db($dbDatabase, $db)or die("Couldn't select the database.");
     //Selects the database
     
-    /*
-    The Above code can be in a different file, then you can place include'filename.php'; instead.
-    */
-    
-    //Lets search the database for the user name and password
+    //Search the database for the user name and password
     //Choose some sort of password encryption, I choose sha256
     //Password function (Not In all versions of MySQL).
     $usr = mysql_real_escape_string($_POST['username']);
-    $pas = hash('sha256', mysql_real_escape_string($_POST['password']));
+    $pas = mysql_real_escape_string($_POST['password']); //use hash('sha256', mysql_real_escape_string($_POST['password'])); for security
     $sql = mysql_query("SELECT * FROM users_table 
         WHERE username='$usr' AND
         password='$pas'
@@ -28,13 +24,14 @@ if(isset($_POST['submit'])){
         session_start();
         $_SESSION['username'] = $row['username'];
         $_SESSION['logged'] = TRUE;
-        header("Location: new.php"); // Modify to go to the page you would like
+        header("Location: confirm.php"); // If user session is successfully started, go to New
         exit;
-    }else{
+    }
+    else{
         header("Location: index.php");
         exit;
     }
-}else{    //If the form button wasn't submitted go to the index page, or login page
+}else{    //If the form button wasn't submitted go to the index page
     header("Location: index.php");    
     exit;
 }
