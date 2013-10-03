@@ -13,6 +13,21 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
+    <script src="js/jquery.js"></script>
+    <script>
+    function checkPasswordMatch() {
+    var password = $("#password").val();
+    var password_verify = $("#password_verify").val();
+
+    if (password != password_verify)
+        $("#password_verify").html("Passwords match.");
+    else
+        $("#password_verify").html("You're good!");
+	}
+	$(document).ready(function () {
+	$("#txtConfirmPassword").keyup(checkPasswordMatch);
+	});
+	</script>
   </head>
   <body style="text-align:center; background: #eee">
   	<a class="no_underline" href="index.php"><div class="clearfix danger">
@@ -31,7 +46,7 @@
 		</div>
 		<div class="form-group">
 			<label for="email">Email Address</label><br>
-			<input class="form-control" type="text" id="email" name="email">
+			<input class="form-control" type="email" id="email" name="email">
 		</div>
 		<div class="form-group">
 			<label for="password">New Password</label>
@@ -39,7 +54,7 @@
 		</div>
 		<div class="form-group">
 			<label for="password_verify">Password again</label>
-			<input class="form-control" type="password" id="password_verify" name="password_verify">
+			<input class="form-control" type="password" onChange="checkPasswordMatch();" id="password_verify" name="password_verify">
 		</div>
 			<input class="btn btn-primary" type="submit" name="submit" value="Sign up">
 		</form>

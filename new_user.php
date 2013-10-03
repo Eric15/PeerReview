@@ -14,12 +14,12 @@ if(isset($_POST['submit'])){
     //Choose some sort of password encryption, I choose sha256
     //Password function (Not In all versions of MySQL).
     $email = mysql_real_escape_string($_POST['email']);
-    $pas = mysql_real_escape_string($_POST['password']); //use hash('sha256', mysql_real_escape_string($_POST['password'])); for security
+    $pas = mysql_real_escape_string($_POST['password']);
     $f_name = mysql_real_escape_string($_POST['f_name']);
     $l_name = mysql_real_escape_string($_POST['l_name']);
     
-    $sql = "INSERT INTO `PeerAppraiser`.`users_table` (`email`, `password`, 'f_name', 'l_name') VALUES ('$email', '$pas', '$f_name', '$l_name')";
-	$result=mysql_query($sql);
+    $sql = "INSERT INTO PeerAppraiser.users_table (`email`, `password`, `f_name`, `l_name`) VALUES ('$email', '$pas', '$f_name', '$l_name')";
+	$result=mysql_query($sql,$db) or die(mysql_error());
         session_start();
         $_SESSION['email'] = $row['email'];
         $_SESSION['f_name'] = $row['f_name'];
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
         header("Location: confirm.php"); // If user session is successfully started, go to New
         exit;
 }
-else{    //If the form button wasn't submitted go to the index page
+else{    //If the form button wasn't submitted go back to the registration page
     header("Location: register.php");    
     exit;
 }
