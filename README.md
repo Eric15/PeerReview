@@ -1,6 +1,8 @@
 PeerReview
 ==========
 
+Demo here: <a href="http://www.kidtopro.com/peerappraiser">Peer Appraiser</a>
+
 A project for mass peer review in a school setting
 
 The aim is to take the "survey" method of gathering feedback around a presentation and make it super easy.
