@@ -35,118 +35,7 @@ session_start();
       <script>
 		$(function() {
 			var availableTags = [
-				"Adriana Barrios German",
-				"Alexander Hernandez",
-				"Alma Nino",
-				"Angeles Flores-Olmedo",
-				"Antonio Roldan Mandelkow",
-				"Benjamin Gonzalez",
-				"Brayan Cabrera-Guillen",
-				"Brian Llapa",
-				"Bryan Elijah Sykes",
-				"Carlos Jiminez-Casarubias",
-				"Chit Ko Ko",
-				"Christopher Martin Mendez Martinez",
-				"Clarence Weah",
-				"Eh Thaw Paw",
-				"Eliseo Benjamin Jovel-Recinos",
-				"Emily Perez Vara",
-				"Erika Montano-Silva",
-				"Ivan Jimenez",
-				"Jackee Saw",
-				"Jasani McMorris",
-				"Jedet Martinez Gamino",
-				"Jennifer Tapia",
-				"Jesus Felipe Castillo-Palacios",
-				"Julie Turnbaugh",
-				"Julio Cesar Xolalpan de Jesus",
-				"Ku Thaw",
-				"Leonor Gallegos-Olivera",
-				"Matthew Toe",
-				"Michael Allen Runningshield Jr",
-				"Myay Paw Wah",
-				"Nataly Leal Islas",
-				"Paw Paw",
-				"Paw Kalu Wah",
-				"Paw Mi Say",
-				"Rafael Dominguez",
-				"Ruby Ramirez",
-				"Say Eh Blut",
-				"Tavian Latrell Willard",
-				"TJ Eaton",
-				"Vanessa Islas Peralta",
-				"William Fabian Ramon Hurtado",
-				"Yingkong Vang",
-				"Aaron Cardenas",
-				"Aidee Ramos-Marquez",
-				"Alexis Mendoza Santiago",
-				"Alexis Rai Galindo-Mogollan",
-				"Angel Berneil Running",
-				"Ansoni Javier Jovel-Recinos",
-				"Arturo Olivares-Arpista",
-				"Bryan Montano Vergara",
-				"Cesia RoseMarie White",
-				"Charly Ansurez-Catalan",
-				"Chris Barradas Flores",
-				"Christian Alfredo Gil-Pliego",
-				"Christie Baw",
-				"Elisea Lybarger",
-				"Eric Turner",
-				"Hector Hernandez-Diaz",
-				"Heron Francis",
-				"Jack (Juan) Sarenpa-Maldonado",
-				"Johanna Guillen",
-				"Jonathan Ysaac Jovel-Recinos",
-				"Jose Martinez Gonzalez",
-				"Jose A. Montano-Silva",
-				"Josie Turnbaugh",
-				"Juan-Luis Villa-Lopez",
-				"Mariah Southard",
-				"Mauricio Martinez-Cruz",
-				"Miguel Angel Flores-Olmedo",
-				"Nicholas BraveHeart",
-				"Nina Reign Krulikosky",
-				"Patrick Weah",
-				"Pee Doh",
-				"Saw Eh Tha Dah",
-				"Thay Ler",
-				"Wendy Mendoza",
-				"Yay Wah",
-				"Zin Maung",
-				"Aileen Fernandez",
-				"Aileen Roque Tenorio",
-				"Aiyana Thomas",
-				"Alex Chavez",
-				"Alexis B Schneider",
-				"Alyssa Morris",
-				"Amairani Fuentes-Noyola",
-				"Angel Sanisaca",
-				"Anissa Olson",
-				"Charles Jones",
-				"Cristobal Reyes",
-				"Dakota Wayne Bluebird",
-				"Dana Vega",
-				"David Naula-Carrillo",
-				"Deja La Rey Herrera-Rincon",
-				"DeVontae Flowers",
-				"Diego Arturo Perez",
-				"Eh Moe",
-				"Eh Kalu Dah",
-				"Eh Ku Say",
-				"Eh Ler Tha Paw",
-				"Evelyn (Brittany) Hernandez-Jimenez",
-				"Gabriela Guardado-Barrera",
-				"Gavin Parsons",
-				"Joseph Kavanaugh",
-				"Kenyon Holzendorf",
-				"Larry Alonso-Isidoro",
-				"Lillian Percy",
-				"Marco Ojeda",
-				"Maria Isabel Lopez-Mendiola",
-				"Nataly Sanmartin",
-				"Paw Moo May Shell",
-				"Rene Alexis Ovando-Morales",
-				"Wah Wah Shee"
+				
 
 			];
 			$( "#peername" ).autocomplete({
@@ -162,10 +51,78 @@ session_start();
         <p style="display:block; margin:0 auto; width:280px;" class="clearfix info">Signed in as <?php echo $_SESSION['f_name'] ?></p>
 	<div class="form-group" style="margin-left:auto;margin-right:auto;width:300px">
                 <h2>New Scorecard</h2>
-		<form action="verify.php" method="post">
+		<form action="feedback.php" method="post">
 		<div class="form-group">
 			<label for="peername">Peer's name</label><br>
 			<input class="form-control" type="text" id="peername" name="peername">
+		</div>
+		<div class="panel panel-info">
+		  <div class="panel-heading">This project was creative!</div>
+		  <div class="panel-body">
+			<label class="radio-inline">
+				  <input type="radio" name="creative" id="creative1" value="1"> <span class="glyphicon glyphicon-thumbs-down"></span><span style="width:20px;" class="glyphicon glyphicon-thumbs-down"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="creative" id="creative2" value="2"> <span class="glyphicon glyphicon-thumbs-down"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="creative" id="creative3" value="3"> <span class="glyphicon glyphicon-thumbs-up"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="creative" id="creative4" value="4"> <span class="glyphicon glyphicon-thumbs-up"></span><span style="width:20px;" class="glyphicon glyphicon-thumbs-up"></span>
+			</label>
+		  </div>
+		</div>
+		<div class="panel panel-info">
+		  <div class="panel-heading">I understand what the project is about!</div>
+		  <div class="panel-body">
+			<label class="radio-inline">
+				  <input type="radio" name="understand" id="understand1" value="1"> <span class="glyphicon glyphicon-thumbs-down"></span><span style="width:20px;" class="glyphicon glyphicon-thumbs-down"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="understand" id="understand2" value="2"> <span class="glyphicon glyphicon-thumbs-down"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="understand" id="understand3" value="3"> <span class="glyphicon glyphicon-thumbs-up"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="understand" id="understand4" value="4"> <span class="glyphicon glyphicon-thumbs-up"></span><span style="width:20px;" class="glyphicon glyphicon-thumbs-up"></span>
+			</label>
+		  </div>
+		</div>
+		<div class="panel panel-info">
+		  <div class="panel-heading">I'd like to see more projects like this</div>
+		  <div class="panel-body">
+			<label class="radio-inline">
+				  <input type="radio" name="seemore" id="seemore1" value="1"> <span class="glyphicon glyphicon-thumbs-down"></span><span style="width:20px;" class="glyphicon glyphicon-thumbs-down"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="seemore" id="seemore2" value="2"> <span class="glyphicon glyphicon-thumbs-down"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="seemore" id="seemore3" value="3"> <span class="glyphicon glyphicon-thumbs-up"></span>
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="seemore" id="seemore4" value="4"> <span class="glyphicon glyphicon-thumbs-up"></span><span style="width:20px;" class="glyphicon glyphicon-thumbs-up"></span>
+			</label>
+		  </div>
+		</div>
+		<div class="panel panel-info">
+		  <div class="panel-heading">Give a badge</div>
+		  <div class="panel-body">
+			<label class="radio-inline">
+				  <input type="radio" name="badge" id="badge1" value="creative"> <span class="glyphicon glyphicon-certificate"></span> Creative
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="badge" id="badge2" value="genius"> <span class="glyphicon glyphicon-flash"></span> Genius
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="badge" id="badge3" value="artist"> <span class="glyphicon glyphicon-picture"></span> Artist
+			</label>
+			<label class="radio-inline">
+				  <input type="radio" name="badge" id="badge4" value="speaker"> <span class="glyphicon glyphicon-comment"></span> Speaker
+			</label>
+		  </div>
 		</div>
 			<input class="btn btn-primary" type="submit" name="submit" value="Submit Feedback">
 		</form>
