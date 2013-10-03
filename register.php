@@ -22,8 +22,16 @@
 		<h2>Start giving feedback to your team!</h2>
 		<form action="new_user.php" method="post">
 		<div class="form-group">
-			<label for="new_user">Pick your User Name</label><br>
-			<input class="form-control" type="text" id="new_user" name="new_user">
+			<label for="f_name">First Name</label><br>
+			<input class="form-control" type="text" id="f_name" name="f_name">
+		</div>
+		<div class="form-group">
+			<label for="l_name">Last Name</label><br>
+			<input class="form-control" type="text" id="l_name" name="l_name">
+		</div>
+		<div class="form-group">
+			<label for="email">Email Address</label><br>
+			<input class="form-control" type="text" id="email" name="email">
 		</div>
 		<div class="form-group">
 			<label for="password">New Password</label>

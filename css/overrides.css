@@ -13,6 +13,11 @@ background: #eee;
   background-color: #d9534f;
   border-color: #d43f3a;
 }
+.success{
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
 .no_underline:hover{
 text-decoration:none;
 }

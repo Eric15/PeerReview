@@ -15,15 +15,15 @@
     <![endif]-->
   </head>
   <body style="text-align:center; background: #eee">
-	<div class="clearfix danger">
+  	<div class="clearfix danger">
       	<h1>Peer Appraiser</h1>
 	</div>
 	<div class="form-group" style="margin-left:auto;margin-right:auto;width:280px">
 		<h2>Please Log In</h2>
 		<form action="verify.php" method="post">
 		<div class="form-group">
-			<label for="username">User Name</label><br>
-			<input class="form-control" type="text" id="username" name="username">
+			<label for="email">Email Address</label><br>
+			<input class="form-control" type="text" id="email" name="email">
 		</div>
 		<div class="form-group">
 			<label for="password">Password</label>
@@ -39,6 +39,13 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
 
 
 

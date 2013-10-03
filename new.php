@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,8 +21,8 @@
 	<div class="clearfix danger">
       	<h1>Peer Appraiser</h1>
 	</div>
+        <p style="display:block; margin:0 auto; width:280px;" class="clearfix info">Signed in as <?php echo $_SESSION['f_name'] ?></p>
 	<div class="form-group" style="margin-left:auto;margin-right:auto;width:280px">
-		<p>You are submitting feedback as <?php echo $_SESSION['username'] ?></p> 
                 <h2>New Scorecard</h2>
 		<form action="verify.php" method="post">
 		<div class="form-group">
