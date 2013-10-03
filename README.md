@@ -1,7 +1,7 @@
 PeerReview
 ==========
 
-Demo here: <a href="kidtopro.com/peerappraiser">Peer Appraiser</a>
+Demo here: <a href="http://www.kidtopro.com/peerappraiser">Peer Appraiser</a>
 
 A project for mass peer review in a school setting
 
