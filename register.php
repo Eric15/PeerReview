@@ -15,25 +15,25 @@
     <![endif]-->
   </head>
   <body style="text-align:center; background: #eee">
-  	<div class="clearfix danger">
+  	<a class="no_underline" href="index.php"><div class="clearfix danger">
       	<h1>Peer Appraiser</h1>
-	</div>
+	</div></a>
 	<div class="form-group" style="margin-left:auto;margin-right:auto;width:280px">
 		<h2>Start giving feedback to your team!</h2>
-		<form action="verify.php" method="post">
+		<form action="new_user.php" method="post">
 		<div class="form-group">
-			<label for="username">Pick your User Name</label><br>
-			<input class="form-control" type="text" id="username" name="username">
+			<label for="new_user">Pick your User Name</label><br>
+			<input class="form-control" type="text" id="new_user" name="new_user">
 		</div>
 		<div class="form-group">
-			<label for="password">Pick a Memorable Password</label>
+			<label for="password">New Password</label>
 			<input class="form-control" type="password" id="password" name="password">
 		</div>
 		<div class="form-group">
-			<label for="password">Type it in again to verify</label>
-			<input class="form-control" type="password" id="password" name="password">
+			<label for="password_verify">Password again</label>
+			<input class="form-control" type="password" id="password_verify" name="password_verify">
 		</div>
-			<input class="btn btn-primary" type="submit" name="submit" value="Login">
+			<input class="btn btn-primary" type="submit" name="submit" value="Sign up">
 		</form>
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

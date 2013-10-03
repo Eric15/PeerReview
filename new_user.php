@@ -13,12 +13,9 @@ if(isset($_POST['submit'])){
     //Search the database for the user name and password
     //Choose some sort of password encryption, I choose sha256
     //Password function (Not In all versions of MySQL).
-    $usr = mysql_real_escape_string($_POST['username']);
+    $new_usr = mysql_real_escape_string($_POST['new_user']);
     $pas = mysql_real_escape_string($_POST['password']); //use hash('sha256', mysql_real_escape_string($_POST['password'])); for security
-    $sql = mysqli("SELECT * FROM users_table 
-        WHERE username='$usr' AND
-        password='$pas'
-        LIMIT 1");
+    $sql = mysql_query(INSERT INTO `PeerAppraiser`.`users_table` (`username`, `password`) VALUES ('$new_usr', '$pas'));
     if(mysql_num_rows($sql) == 1){
         $row = mysql_fetch_array($sql);
         session_start();
@@ -28,10 +25,10 @@ if(isset($_POST['submit'])){
         exit;
     }
     else{
-        header("Location: index.php");
+        header("Location: register.php");
         exit;
     }
-}else{    //If the form button wasn't submitted go to the index page
+}else{    //If the form button was not submitted go to the index page
     header("Location: index.php");    
     exit;
 }

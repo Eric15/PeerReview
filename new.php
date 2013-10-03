@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,17 +16,18 @@
     <![endif]-->
   </head>
   <body style="text-align:center; background: #eee">
-  	<div class="clearfix danger">
+	<div class="clearfix danger">
       	<h1>Peer Appraiser</h1>
 	</div>
 	<div class="form-group" style="margin-left:auto;margin-right:auto;width:280px">
-		<h2>Scorecard</h2>
+		<p>You are submitting feedback as <?php echo $_SESSION['username'] ?></p> 
+                <h2>New Scorecard</h2>
 		<form action="verify.php" method="post">
 		<div class="form-group">
 			<label for="peername">Peer's name</label><br>
 			<input class="form-control" type="text" id="peername" name="peername">
 		</div>
-			<input class="btn btn-primary" type="submit" name="submit" value="Login">
+			<input class="btn btn-primary" type="submit" name="submit" value="Submit Feedback">
 		</form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>

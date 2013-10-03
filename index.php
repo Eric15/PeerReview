@@ -15,7 +15,7 @@
     <![endif]-->
   </head>
   <body style="text-align:center; background: #eee">
-  	<div class="clearfix danger">
+	<div class="clearfix danger">
       	<h1>Peer Appraiser</h1>
 	</div>
 	<div class="form-group" style="margin-left:auto;margin-right:auto;width:280px">
