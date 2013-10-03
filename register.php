@@ -13,7 +13,6 @@
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
-    <script src="js/jquery.js"></script>
     <script>
     function checkPasswordMatch() {
     var password = $("#password").val();
@@ -59,9 +58,8 @@
 			<input class="btn btn-primary" type="submit" name="submit" value="Sign up">
 		</form>
 	</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

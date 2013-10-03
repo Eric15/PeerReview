@@ -33,9 +33,8 @@
 		</form>
 	</div>
 	<a href="register.php" class="btn btn-success btn-lg">New user?</a>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
